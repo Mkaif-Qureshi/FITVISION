@@ -20,7 +20,7 @@ def start_exercise():
         subprocess.Popen(["python", "exercise_models/side_lying_leg_lifting.py"])
     elif selected_exercise == "Tricep":
         status_label.config(text=f"Please wait, Starting exercise: {selected_exercise}...")
-        subprocess.Popen(["python", "exercise_models/tricep.py"])
+        subprocess.Popen(["python", "exercise_models/test.py"])
     elif selected_exercise == "Lunges":
         status_label.config(text=f"Please wait, Starting exercise: {selected_exercise}...")
         subprocess.Popen(["python", "exercise_models/lunges.py"])
