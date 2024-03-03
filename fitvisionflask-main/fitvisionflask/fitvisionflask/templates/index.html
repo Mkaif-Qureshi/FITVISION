@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Welcome to FitVision</h1>
+    <p class="lead">Your ultimate destination for personalized fitness training and well-being.</p>
+    <p><a href="{{ url_for('explore') }}" class="btn btn-primary btn-lg">Explore Exercises &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Your Fitness Journey Begins Here</h2>
+        <p>
+            Start your fitness journey with FitVision. Our experienced trainers are here to guide you through effective workouts tailored to your goals.
+        </p>
+        <p><a class="btn btn-secondary" href="{{ url_for('about') }}">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Explore Varied Exercises</h2>
+        <p>Dive into a diverse range of exercises that cater to different fitness levels and preferences. Whether you're a beginner or an advanced athlete, we have something for everyone.</p>
+        <p><a class="btn btn-secondary" href="{{ url_for('explore') }}">Explore Now &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Book a Personalized Session</h2>
+        <p>Take the next step towards a healthier you. Book a personalized training session with our certified trainers and kickstart your fitness journey today.</p>
+        <p><a class="btn btn-secondary" href="{{ url_for('login') }}">Book a Session &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

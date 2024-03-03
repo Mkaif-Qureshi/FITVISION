@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h1>Explore Exercises</h1>
+
+    <div class="row">
+        <!-- Exercise Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/exercise1.jpg') }}" class="card-img-top" alt="Exercise 1">
+                <div class="card-body">
+                    <h5 class="card-title">Cardio Workout</h5>
+                    <p class="card-text">Improve your cardiovascular health with this high-intensity cardio workout.</p>
+                    <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExercise1">Details</a>
+                </div>
+                <div id="collapseExercise1" class="collapse">
+                    <div class="card-body">
+                        <p>This cardio workout includes a mix of running, jumping jacks, and other aerobic exercises to boost your heart rate and endurance.</p>
+                        <p>Duration: 30 minutes</p>
+                        <p>Intensity: High</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise Card 2 -->
+        <div class="col-md-4 mb-4"> 
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/exercise2.jpg') }}" class="card-img-top" alt="Exercise 2">
+                <div class="card-body">
+                    <h5 class="card-title">Strength Training</h5>
+                    <p class="card-text">Build muscle strength and tone your body with this effective strength training workout.</p>
+                    <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExercise2">Details</a>
+                </div>
+                <div id="collapseExercise2" class="collapse">
+                    <div class="card-body">
+                        <p>This strength training routine focuses on various muscle groups using weights and resistance exercises.</p>
+                        <p>Duration: 45 minutes</p>
+                        <p>Intensity: Moderate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more Exercise Cards as needed -->
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">{{ title }}</h1>
+    <p class="lead">{{ message }}</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Our Mission</h2>
+        <p>We are dedicated to helping individuals achieve their fitness goals by providing personalized training sessions with experienced trainers.</p>
+    </div>
+    <div class="col-md-6">
+        <h2>Why Choose Us?</h2>
+        <p>With a team of passionate and certified trainers, we offer a variety of exercises tailored to your needs. Join us in your fitness journey!</p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <h2>Meet Our Team</h2>
+    </div>
+    <!-- Add information about your team members with their photos and descriptions -->
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/trainer1.jpg') }}" class="img-fluid rounded-circle" alt="Trainer 1">
+        <h4>Trainer 1</h4>
+        <p>Experienced fitness trainer with a focus on strength training and conditioning.</p>
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/trainer2.jpg') }}" class="img-fluid rounded-circle" alt="Trainer 2">
+        <h4>Trainer 2</h4>
+        <p>Certified yoga instructor specializing in flexibility and mindfulness.</p>
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/trainer3.jpg') }}" class="img-fluid rounded-circle" alt="Trainer 3">
+        <h4>Trainer 3</h4>
+        <p>Functional fitness expert helping clients improve everyday movements.</p>
+    </div>
+</div>
+
+{% endblock %}
