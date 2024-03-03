@@ -96,3 +96,14 @@ def session_requests():
 
 
 #     return render_template('book_session.html')
+
+
+from flask import render_template
+from flask.views import MethodView
+
+class CameraView(MethodView):
+    def get(self):
+        return render_template('camera.html')
+
+# Add the route for the CameraView
+app.add_url_rule('/camera', view_func=CameraView.as_view('camera'))
