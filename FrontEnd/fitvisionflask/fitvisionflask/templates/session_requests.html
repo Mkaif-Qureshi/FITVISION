@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h1>Session Requests</h1>
+
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Session Type</th>
+                        <th scope="col">Preferred Trainer</th>
+                        <th scope="col">Session Date</th>
+                        <th scope="col">Session Time</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for request in session_requests %}
+                        <tr>
+                            <td>{{ request.user_name }}</td>
+                            <td>{{ request.user_email }}</td>
+                            <td>{{ request.user_phone }}</td>
+                            <td>{{ request.session_type }}</td>
+                            <td>{{ request.preferred_trainer }}</td>
+                            <td>{{ request.session_date }}</td>
+                            <td>{{ request.session_time }}</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Session Actions">
+                                    <button type="button" class="btn btn-success">Accept</button>
+                                    <button type="button" class="btn btn-danger">Decline</button>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

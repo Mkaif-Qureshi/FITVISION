@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template
+from flask import render_template, request
 from fitvisionflask import app
 
 @app.route('/')
@@ -55,11 +55,44 @@ def book_session():
 def session_requests():
     """Renders the session requests page for trainers."""
     # Add logic to handle session requests
-    return render_template(
-        'session_requests.html',
-        title='Session Requests',
-        year=datetime.now().year,
-    )
+    # Dummy session request entries
+    session_request1 = {
+        "user_name": "User 1",
+        "user_email": "user1@example.com",
+        "user_phone": "123-456-7890",
+        "session_type": "Personal Training",
+        "preferred_trainer": "Trainer A",
+        "session_date": "2024-03-10",
+        "session_time": "10:00 AM",
+    }
+
+    session_request2 = {
+        "user_name": "User 2",
+        "user_email": "user2@example.com",
+        "user_phone": "987-654-3210",
+        "session_type": "Group Training",
+        "preferred_trainer": "Trainer B",
+        "session_date": "2024-03-12",
+        "session_time": "02:00 PM",
+    }
+
+    # Create a list of session requests
+    session_requests_data = [session_request1, session_request2]
+
+    return render_template('session_requests.html', session_requests=session_requests_data)
 
 
 
+# @app.route('/book_session', methods=['GET', 'POST'])
+# def book_session():
+#     if request.method == 'POST':
+#         full_name = request.form.get('fullName')
+#         email = request.form.get('email')
+#         phone = request.form.get('phone')
+#         session_type = request.form.get('sessionType')
+#         preferred_trainer = request.form.get('preferredTrainer')
+#         session_date = request.form.get('sessionDate')
+#         # Add your session booking logic here
+
+
+#     return render_template('book_session.html')

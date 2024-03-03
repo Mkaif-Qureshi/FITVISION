@@ -5,9 +5,9 @@
 <div class="container mt-3">
     <h1>Book a Session with a Professional</h1>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-6 offset-md-3">
-            <form action="{{ url_for('book_session') }}" method="post">
+            <form action="{{ url_for('book_session') }}" method="post" class="center">
                 <div class="form-group">
                     <label for="fullName">Full Name:</label>
                     <input type="text" class="form-control" id="fullName" name="fullName" required>
@@ -30,11 +30,19 @@
                 </div>
                 <div class="form-group">
                     <label for="preferredTrainer">Preferred Trainer:</label>
-                    <input type="text" class="form-control" id="preferredTrainer" name="preferredTrainer">
+                    <select class="form-control" id="preferredTrainer" name="preferredTrainer">
+                        <option value="trainer1">Trainer 1</option>
+                        <option value="trainer2">Trainer 2</option>
+                        <!-- Add more trainers as needed -->
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="sessionDate">Preferred Session Date:</label>
                     <input type="date" class="form-control" id="sessionDate" name="sessionDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="sessionTime">Preferred Session Time:</label>
+                    <input type="time" class="form-control" id="sessionTime" name="sessionTime" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Book Session</button>
             </form>
