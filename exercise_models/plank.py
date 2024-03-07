@@ -65,7 +65,7 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
             pass
 
         # Convert back to BGR format
-        image.flags.writeable = True
+        image.flags.writeable = Trueq
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
         # Draw pose landmarks
