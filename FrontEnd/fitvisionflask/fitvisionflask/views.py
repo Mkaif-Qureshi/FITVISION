@@ -269,6 +269,10 @@ def biceup_curl():
 
 
 @app.route("/")
+def index():
+    return render_template("index.html")
+
+
 @app.route("/tricep")
 def tricep_path():
     return Response(tricep(), mimetype="multipart/x-mixed-replace; boundary=frame")
