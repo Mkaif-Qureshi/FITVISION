@@ -1,52 +1,109 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="container mt-8">
+    <h1 class="text-3xl font-bold mb-6">Explore Exercises</h1>
 
-<div class="container mt-3">
-    <h1>Explore Exercises</h1>
-
-    <div class="row">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Exercise Card 1 -->
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/exercise1.jpg') }}" class="card-img-top" alt="Exercise 1">
-                <div class="card-body">
-                    <h5 class="card-title">Cardio Workout</h5>
-                    <p class="card-text">Improve your cardiovascular health with this high-intensity cardio workout.</p>
-                    <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExercise1">Details</a>
-                </div>
-                <div id="collapseExercise1" class="collapse">
-                    <div class="card-body">
-                        <p>This cardio workout includes a mix of running, jumping jacks, and other aerobic exercises to boost your heart rate and endurance.</p>
-                        <p>Duration: 30 minutes</p>
-                        <p>Intensity: High</p>
-                    </div>
-                </div>
-            </div>
+
+        <div class="mb-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md" style="height: 540px;">
+<img src="{{ url_for('static', filename='images/gifs/back_row.gif') }}" class="rounded-md mb-4" style="width:500px; height: 250px; border-radius: 4px;" alt="Exercise 1">
+        <h5 class="text-xl font-semibold mb-2">Back Row Exercise</h5>
+        <p class="text-gray-300 mb-4">Strengthen your back muscles with this effective back row exercise. This workout targets your upper back, improving posture and overall strength.</p>
+        <p class="text-gray-300 mb-2">Duration: 20 minutes</p>
+        <p class="text-gray-300">Intensity: Moderate</p>
+        <div class="flex justify-center"> <!-- Added this div with flex justify-center -->
+            <a href="/tricep">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Start Exercise</button>
+            </a>
         </div>
-
-        <!-- Exercise Card 2 -->
-        <div class="col-md-4 mb-4"> 
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/exercise2.jpg') }}" class="card-img-top" alt="Exercise 2">
-                <div class="card-body">
-                    <h5 class="card-title">Strength Training</h5>
-                    <p class="card-text">Build muscle strength and tone your body with this effective strength training workout.</p>
-                    <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExercise2">Details</a>
-                </div>
-                <div id="collapseExercise2" class="collapse">
-                    <div class="card-body">
-                        <p>This strength training routine focuses on various muscle groups using weights and resistance exercises.</p>
-                        <p>Duration: 45 minutes</p>
-                        <p>Intensity: Moderate</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Add more Exercise Cards as needed -->
-
     </div>
 </div>
 
+<div class="mb-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md" style="height: 540px;">
+        <img src="{{ url_for('static', filename='images/gifs/bicep_curl.gif') }}" class="rounded-md mb-4" style="width:500px; height: 250px; border-radius: 4px;" alt="Exercise 2">
+        <h5 class="text-xl font-semibold mb-2">Bicep Curl Exercise</h5>
+        <p class="text-gray-300 mb-4">Build strong and defined biceps with this bicep curl exercise. Performing bicep curls helps isolate and strengthen the muscles in your arms.</p>
+        <p class="text-gray-300 mb-2">Duration: 15 minutes</p>
+        <p class="text-gray-300">Intensity: Low to Moderate</p>
+        <div class="flex justify-center"> <!-- Added this div with flex justify-center -->
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Start Exercise</button>
+        </div>
+    </div>
+</div>
+
+<div class="mb-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md" style="height: 540px;">
+
+        <img src="{{ url_for('static', filename='images/gifs/lunges.gif') }}" class="rounded-md mb-4" style="width:500px; height: 250px; border-radius: 4px;" alt="Exercise 1">
+        <h5 class="text-xl font-semibold mb-2">Lunges Exercise</h5>
+        <p class="text-gray-300 mb-4">Improve lower body strength and flexibility with lunges. Performing lunges engages your quads, hamstrings, and glutes.</p>
+        <p class="text-gray-300 mb-2">Duration: 20 minutes</p>
+        <p class="text-gray-300">Intensity: Moderate</p>
+        <div class="flex justify-center">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Start Exercise</button>
+        </div>
+    </div>
+</div>
+<div class="mb-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md" style="height: 540px;">
+
+        <img src="{{ url_for('static', filename='images/gifs/plank.gif') }}" class="rounded-md mb-4" style="width:500px; height: 250px; border-radius: 4px;" alt="Exercise 2">
+        <h5 class="text-xl font-semibold mb-2">Plank Exercise</h5>
+        <p class="text-gray-300 mb-4">Strengthen your core and improve overall body stability with the plank exercise. This full-body workout engages your abs, back, and shoulders.</p>
+        <p class="text-gray-300 mb-2">Duration: 15 minutes</p>
+        <p class="text-gray-300">Intensity: High</p>
+        <div class="flex justify-center">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Start Exercise</button>
+        </div>
+    </div>
+</div>
+<div class="mb-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md" style="height: 540px;">
+
+        <img src="{{ url_for('static', filename='images/gifs/shoulder_press.gif') }}" class="rounded-md mb-4" style="width:500px; height: 250px; border-radius: 4px;" alt="Exercise 3">
+        <h5 class="text-xl font-semibold mb-2">Shoulder Press Exercise</h5>
+        <p class="text-gray-300 mb-4">Build shoulder strength and tone your upper body with the shoulder press exercise. This workout targets your deltoids, trapezius, and triceps.</p>
+        <p class="text-gray-300 mb-2">Duration: 15 minutes</p>
+        <p class="text-gray-300">Intensity: Moderate to High</p>
+        <div class="flex justify-center">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Start Exercise</button>
+        </div>
+    </div>
+</div>
+
+<div class="mb-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md" style="height: 540px;">
+
+        <img src="{{ url_for('static', filename='images/gifs/side_lying_leg_lifting.gif') }}" class="rounded-md mb-4" style="width:500px; height: 250px; border-radius: 4px;" alt="Exercise 4">
+        <h5 class="text-xl font-semibold mb-2">Side Lying Leg Lifting Exercise</h5>
+        <p class="text-gray-300 mb-4">Target your hip abductors and outer thighs with side-lying leg lifting. This exercise helps improve hip strength and stability.</p>
+        <p class="text-gray-300 mb-2">Duration: 10 minutes</p>
+        <p class="text-gray-300">Intensity: Low to Moderate</p>
+        <div class="flex justify-center">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Start Exercise</button>
+        </div>
+    </div>
+</div>
+
+  <div class="mb-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md" style="height: 540px;">
+
+        <img src="{{ url_for('static', filename='images/gifs/tricep.gif') }}" class="rounded-md mb-4" style="width:500px; height: 250px; border-radius: 4px;" alt="Exercise 5">
+        <h5 class="text-xl font-semibold mb-2">Tricep Extension Exercise</h5>
+        <p class="text-gray-300 mb-4">Focus on toning and strengthening your triceps with the tricep extension exercise. This workout targets the back of your arms for improved arm definition.</p>
+        <p class="text-gray-300 mb-2">Duration: 12 minutes</p>
+        <p class="text-gray-300">Intensity: Moderate</p>
+        <div class="flex justify-center">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Start Exercise</button>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
 {% endblock %}

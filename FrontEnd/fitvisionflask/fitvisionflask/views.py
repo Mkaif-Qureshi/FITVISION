@@ -264,6 +264,10 @@ def biceup_curl():
     # Close the metrics file
     metrics_file.close()
 
+@app.route("/test")
+def hello_world():
+    return render_template("test.html")
+
 
 def backrow():
 
@@ -409,10 +413,6 @@ def backrow():
 
 
 @app.route("/")
-def index():
-    return render_template("index.html")
-
-
 @app.route("/tricep")
 def tricep_path():
 
