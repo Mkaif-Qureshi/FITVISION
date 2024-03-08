@@ -1,53 +1,51 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="container mt-8 text-white">
+    <h1 class="text-3xl font-bold mb-6">Book a Session with a Professional</h1>
 
-<div class="container mt-3">
-    <h1>Book a Session with a Professional</h1>
-
-    <div class="row justify-content-center">
-        <div class="col-md-6 offset-md-3">
-            <form action="{{ url_for('book_session') }}" method="post" class="center">
-                <div class="form-group">
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+    <div class="flex justify-center">
+        <div class="w-full md:w-1/2 lg:w-1/3">
+            <form action="{{ url_for('book_session') }}" method="post" class="bg-gray-800 p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="fullName" class="text-sm">Full Name:</label>
+                    <input type="text" class="form-input mt-2 w-full" id="fullName" name="fullName" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                <div class="mb-4">
+                    <label for="email" class="text-sm">Email:</label>
+                    <input type="email" class="form-input mt-2 w-full" id="email" name="email" required>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                <div class="mb-4">
+                    <label for="phone" class="text-sm">Phone Number:</label>
+                    <input type="tel" class="form-input mt-2 w-full" id="phone" name="phone" required>
                 </div>
-                <div class="form-group">
-                    <label for="sessionType">Session Type:</label>
-                    <select class="form-control" id="sessionType" name="sessionType" required>
+                <div class="mb-4">
+                    <label for="sessionType" class="text-sm">Session Type:</label>
+                    <select class="form-select mt-2 w-full" id="sessionType" name="sessionType" required>
                         <option value="personalTraining">Personal Training</option>
                         <option value="groupTraining">Group Training</option>
                         <option value="virtualTraining">Virtual Training</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="preferredTrainer">Preferred Trainer:</label>
-                    <select class="form-control" id="preferredTrainer" name="preferredTrainer">
+                <div class="mb-4">
+                    <label for="preferredTrainer" class="text-sm">Preferred Trainer:</label>
+                    <select class="form-select mt-2 w-full" id="preferredTrainer" name="preferredTrainer">
                         <option value="trainer1">Trainer 1</option>
                         <option value="trainer2">Trainer 2</option>
                         <!-- Add more trainers as needed -->
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="sessionDate">Preferred Session Date:</label>
-                    <input type="date" class="form-control" id="sessionDate" name="sessionDate" required>
+                <div class="mb-4">
+                    <label for="sessionDate" class="text-sm">Preferred Session Date:</label>
+                    <input type="date" class="form-input mt-2 w-full" id="sessionDate" name="sessionDate" required>
                 </div>
-                <div class="form-group">
-                    <label for="sessionTime">Preferred Session Time:</label>
-                    <input type="time" class="form-control" id="sessionTime" name="sessionTime" required>
+                <div class="mb-4">
+                    <label for="sessionTime" class="text-sm">Preferred Session Time:</label>
+                    <input type="time" class="form-input mt-2 w-full" id="sessionTime" name="sessionTime" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Book Session</button>
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-full">Book Session</button>
             </form>
         </div>
     </div>
 </div>
-
 {% endblock %}
